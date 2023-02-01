@@ -20,6 +20,10 @@ app.use(express.json());
 app.use(cors());
 
 
+app.get('/', (req, res) => {
+  res.send('ok');
+})
+
 app.post('/test', (req, res) => {
   db('recept').insert({
     maträtt: req.body.maträtt,
